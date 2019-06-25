@@ -10,14 +10,17 @@ public class ArraysUtilsTest {
 
     @Before
     public void setUp(){
+        //given
         arraysUtils = new ArraysUtils();
     }
 
     @Test
     public void binarySearch_elementExist(){
+        //when
         int[] array = {1,3,5,7,9,10};
         int n=7;
         int result = arraysUtils.binarySearch(array,n);
+        //then
         Assert.assertEquals(3,result);
     }
 
@@ -31,8 +34,10 @@ public class ArraysUtilsTest {
 
     @Test
     public void bubbleSort(){
+        //when
         int[] array = {1,5,7,3,9,10};
         arraysUtils.bubbleSort(array);
+        //then
         Assert.assertArrayEquals(new int[]{1,3,5,7,9,10},array);
     }
 }
